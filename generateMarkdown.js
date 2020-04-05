@@ -1,8 +1,13 @@
 function generateMarkdown(data) {
-  return `
-# ${data.title}
+  console.log(data.username)
+//   return `
+// # ${data.title}
 
-`;
+// `;
 }
 
-module.exports = generateMarkdown;
+module.exports = { 
+  markdown: generateMarkdown // () {
+  //   console.log(response.project)
+  // }
+}

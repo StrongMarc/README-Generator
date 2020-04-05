@@ -1,4 +1,8 @@
+const fs = require("fs");
+const axios = require("axios");
 const inquirer = require("inquirer");
+// var api = require("./api.js");
+var generateMarkdown = require("./generateMarkdown.js");
 
 const questions = [
   {
@@ -53,6 +57,7 @@ const questions = [
 // ];
 
 function writeToFile(fileName, data) {
+
 }
 
 function init() {
@@ -74,7 +79,9 @@ function init() {
         // console.log (tempArray)
       // }
       console.log (response)
-      
+      // api(response.username);
+      generateMarkdown.markdown(response)
+      // console.log(generateMarkdown.markdown(response));
     });
     
 }
