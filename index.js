@@ -13,7 +13,7 @@ const questions = [
   {
     type: "input",
     message: "What is your project title?",
-    name: "project",
+    name: "title",
   },
   {
     type: "input",
@@ -81,7 +81,7 @@ function init() {
       console.log (response)
       // api(response.username);
       generateMarkdown.markdown(response)
-      // console.log(generateMarkdown.markdown(response));
+      console.log(generateMarkdown.markdown(response));
     });
     
 }

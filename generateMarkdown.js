@@ -1,9 +1,9 @@
 function generateMarkdown(data) {
   console.log(data.username)
-//   return `
-// # ${data.title}
+  return `
+# ${data.title}
 
-// `;
+`;
 }
 
 module.exports = { 
