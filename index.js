@@ -23,11 +23,34 @@ const questions = [
     choices: [
       "Installation",
       "Usage",
-      "Credits",
       "License"
     ]
   },
+  {
+    type: "input",
+    message: "Describe the steps required for your project installation?",
+    name: "install",
+  },
+  {
+    type: "input",
+    message: "Indicate instructions and examples for use: ",
+    name: "usage",
+  },
+  {
+    type: "input",
+    message: "Input license requirements: ",
+    name: "license",
+  },
+  
 ];
+
+// const contentInstallation = [
+//   {
+//     type: "input",
+//     message: "Describe the steps required for your project installation?",
+//     name: "install",
+//   }
+// ];
 
 function writeToFile(fileName, data) {
 }
@@ -36,9 +59,24 @@ function init() {
   inquirer
     .prompt(questions)
     .then(function( response ) {
-      console.log(response)
-
-  });
+      // answers = {};
+      // if (response.contents.includes("Installation")){
+      //   inquirer
+      //     .prompt(contentInstallation)
+      //     .then(function( b ){
+      //       tempArray = b;
+      //       console.log ("yes")
+      //       //https://stackoverflow.com/questions/41234381/how-to-join-two-json-array-objects-in-node/41234423
+      //       answers = Object.assign(response, tempArray)
+            
+      //     })
+        
+        // console.log (tempArray)
+      // }
+      console.log (response)
+      
+    });
+    
 }
 
 init();
