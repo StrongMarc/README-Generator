@@ -60,10 +60,17 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-
+  fs.writeFile(fileName, data, function(err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(`Success!`);
+  });
 }
 
 function init() {
+
+  // prompt for questions
   inquirer
     .prompt(questions)
     .then(function( response ) {
@@ -72,8 +79,17 @@ function init() {
       // api(response.username);
       generateMarkdown.markdown(response)
       console.log(generateMarkdown.markdown(response));
+
+      // https://api.github.com/users/StrongMarc
+      let queryUrl = "https://api.github.com/users/" + response.username;
+      let filename = "README.md"
+      console.log(queryUrl)
+
+      writeToFile(filename, response)
     });
     
+  
+
 }
 
 init();

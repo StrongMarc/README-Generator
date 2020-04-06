@@ -1,21 +1,20 @@
 function generateMarkdown(data) {
-  console.log(data.username)
   return `
 # ${data.title}
 
 ## ${data.description}
 
-## $${data.contents}
+## ${data.contents}
 
-## $${data.install}
+## ${data.install}
 
-## $${data.usage}
+## ${data.usage}
 
-## $${data.license}
+## ${data.license}
 
-## $${data.contributing}
+## ${data.contributing}
 
-## $${data.tests}
+## ${data.tests}
 `;
 }
 
