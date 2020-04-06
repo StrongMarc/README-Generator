@@ -1,7 +1,7 @@
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
-// var api = require("./api.js");
+var api = require("./api.js");
 var generateMarkdown = require("./generateMarkdown.js");
 
 // questions to prompt
@@ -60,7 +60,7 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, function(err) {
+  fs.writeFile(fileName, JSON.stringify(data, null, `\t`), function(err) {
     if (err) {
       return console.log(err);
     }
@@ -74,21 +74,25 @@ function init() {
   inquirer
     .prompt(questions)
     .then(function( response ) {
-      
       console.log (response)
-      // api(response.username);
-      generateMarkdown.markdown(response)
-      console.log(generateMarkdown.markdown(response));
 
-      // https://api.github.com/users/StrongMarc
-      let queryUrl = "https://api.github.com/users/" + response.username;
-      let filename = "README.md"
-      console.log(queryUrl)
+      const queryUrl = "https://api.github.com/users/StrongMarc";
+      axios.get(queryUrl).then(function(res) {
+        const avatar = res.data.avatar_url
+        const email = res.data.email
+        console.log(avatar)
+        console.log(email)
+      
+      
 
-      writeToFile(filename, response)
+        generateMarkdown.markdown(response)
+        console.log(generateMarkdown.markdown(response));
+        
+        // Generate README.md
+        let filename = "README.md"
+        writeToFile(filename, response)
+      });
     });
-    
-  
 
 }
 
