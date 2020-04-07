@@ -59,6 +59,7 @@ const questions = [
   
 ];
 
+// Given:  write to README.md
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, JSON.stringify(data, null, `\t`), function(err) {
     if (err) {
@@ -75,15 +76,19 @@ function init() {
     .prompt(questions)
     .then(function( response ) {
       console.log (response)
-      baseUrl = "https://api.github.com/users/"
-      const queryUrl = baseUrl + response.username;
-      axios.get(queryUrl).then(function(res) {
-        const avatar = res.data.avatar_url
-        const email = res.data.email
-        console.log(avatar)
-        console.log(email)
+      // baseUrl = "https://api.github.com/users/"
+      //   const queryUrl = baseUrl + response.username;
+      // moduralization of api & axios
+        api.getUser(response.username).then(function(res) {
+          const avatar = res.data.avatar_url
+          const email = res.data.email
+          // const avatarStr = avatar.join()
+          console.log(avatar)
+          console.log(email)
+        });
       
-      
+        // api.getUser(response.username)
+        // console.log ("test", api.getUser(response.username))
 
         generateMarkdown.markdown(response)
         console.log(generateMarkdown.markdown(response));
@@ -91,7 +96,7 @@ function init() {
         // Generate README.md
         let filename = "README.md"
         writeToFile(filename, response)
-      });
+    
     });
 
 }

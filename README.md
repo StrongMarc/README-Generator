@@ -4,7 +4,7 @@
 	"description": "some",
 	"install": "123",
 	"usage": "ex",
-	"license": "000",
-	"contributing": "folks",
+	"license": "001",
+	"contributing": "",
 	"tests": "run"
 }
