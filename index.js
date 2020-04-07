@@ -75,8 +75,8 @@ function init() {
     .prompt(questions)
     .then(function( response ) {
       console.log (response)
-
-      const queryUrl = "https://api.github.com/users/StrongMarc";
+      baseUrl = "https://api.github.com/users/"
+      const queryUrl = baseUrl + response.username;
       axios.get(queryUrl).then(function(res) {
         const avatar = res.data.avatar_url
         const email = res.data.email

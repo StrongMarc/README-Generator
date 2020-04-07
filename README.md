@@ -5,6 +5,6 @@
 	"install": "123",
 	"usage": "ex",
 	"license": "000",
-	"contributing": "people",
+	"contributing": "folks",
 	"tests": "run"
 }

@@ -1,5 +1,6 @@
 const api = {
-  getUser(username) {
+  // getUser(userrname) {
+  getUser:  function(username) {
     
   }
 };
