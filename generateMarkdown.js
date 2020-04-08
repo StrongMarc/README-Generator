@@ -23,7 +23,7 @@ ${data.install}
 ${data.usage}
 
 ## License:
-![License](https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>)
+![License](https://img.shields.io/badge/License-MIT-Blue)
 
 ${data.license}
 
