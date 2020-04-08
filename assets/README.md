@@ -1,8 +1,8 @@
 
-# Title
+# README-project
 
 ## Description:
-some
+Generates a README.md in an assets folder that contains a gitHub user project, projects description, Table of contents of the README.md, installation steps, instruction of project use, license, contributers and test driven development.
 
 ## Table of Contents:
 
@@ -20,9 +20,9 @@ some
 ex
 
 ## License:
-![License](https://img.shields.io/badge/License-MIT-Blue)
+![License](https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>)
 
-0011
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 ## Contributing:
 ll
