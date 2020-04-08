@@ -22,6 +22,8 @@ ${data.install}
 ${data.usage}
 
 ## License:
+![License](https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>)
+
 ${data.license}
 
 ## Contributing:
