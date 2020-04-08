@@ -28,7 +28,9 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 ll
 
 ## Tests:
+```
 npm run tests
+```
 
 ## Questions:
 <img src= "https://avatars1.githubusercontent.com/u/60418958?v=4" alt = "user image" style = "width: 100px" height = "100px" />
