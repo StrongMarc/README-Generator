@@ -14,22 +14,22 @@ ${data.description}
 * [Tests](#Tests)
 * [Questions](#Questions)
 
-## Installation 
+## Installation: 
 ${data.install}
 
-## Usage
+## Usage:
 ${data.usage}
 
-## License
+## License:
 ${data.license}
 
-## Contributing
+## Contributing:
 ${data.contributing}
 
-## Tests
+## Tests:
 ${data.tests}
 
-## Questions
+## Questions:
 <img src= "${data.avatar}" alt = "user image" style = "width: 100px" height = "100px" />
 
  ${data.email}

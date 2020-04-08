@@ -13,22 +13,22 @@ some
 * [Tests](#Tests)
 * [Questions](#Questions)
 
-## Installation 
+## Installation: 
 123
 
-## Usage
+## Usage:
 ex
 
-## License
+## License:
 000
 
-## Contributing
+## Contributing:
 ll
 
-## Tests
+## Tests:
 run
 
-## Questions
+## Questions:
 <img src= "https://avatars1.githubusercontent.com/u/60418958?v=4" alt = "user image" style = "width: 100px" height = "100px" />
 
  null
