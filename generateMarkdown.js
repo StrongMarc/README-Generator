@@ -1,4 +1,5 @@
 function generateMarkdown(data) {
+  // return string for README markdown
   return `
 # ${data.title}
 
@@ -36,6 +37,7 @@ ${data.tests}
 `;
 }
 
+// modularization module.exports
 module.exports = { 
   markdown: generateMarkdown 
 }

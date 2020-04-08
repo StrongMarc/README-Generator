@@ -1,6 +1,9 @@
+// add npm package fs, axious and inquirer
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
+
+// add developer modules
 var api = require("./api.js");
 var generateMarkdown = require("./generateMarkdown.js");
 
@@ -61,6 +64,7 @@ const questions = [
 
 // Given:  write to README.md
 function writeToFile(fileName, data) {
+  // code for writing readme file
   fs.writeFile(fileName, data, function(err) {
     if (err) {
       throw err;
@@ -77,17 +81,21 @@ function init() {
     .then(function( response ) {
      
       // moduralization of api & axios
-        api.getUser(response.username).then(function(res) {
-          const avatar = res.data.avatar_url
-          const email = res.data.email
+      // api call like 9-activiy 9 combined with 9activity 33
+        api.getUser(response.username).then(function(userdata) {
+          // define avatar and email from queryUrl
+          const avatar = userdata.data.avatar_url
+          const email = userdata.data.email
       
           // add avatar & email to response object
+          //https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_properties3
           response.avatar = avatar;
           response.email = email;
         
+          // set md to to generateMarkdown return string
           md = generateMarkdown.markdown(response)
           
-          // Generate README.md
+          // Generate README.md, call writeToFile function
           let filename = "README.md"
           writeToFile(filename, md)
         });

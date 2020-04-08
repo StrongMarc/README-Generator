@@ -20,10 +20,10 @@ some
 ex
 
 ## License:
-000
+0011
 
 ## Contributing:
-ll
+people
 
 ## Tests:
 run
