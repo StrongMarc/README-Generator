@@ -76,8 +76,7 @@ function init() {
     .prompt(questions)
     .then(function( response ) {
       console.log (response)
-      // baseUrl = "https://api.github.com/users/"
-      //   const queryUrl = baseUrl + response.username;
+     
       // moduralization of api & axios
         api.getUser(response.username).then(function(res) {
           const avatar = res.data.avatar_url
@@ -85,17 +84,38 @@ function init() {
           // const avatarStr = avatar.join()
           console.log(avatar)
           console.log(email)
+
+          response.avatar = avatar;
+          response.email = email;
+        //  response = {
+        //    username: "StrongMarc",
+        //    title: "Title"
+        //  }
+
+        //  response.userAvatar = avatar;
+        //  response.userEmail = email;
+
+        //  response = {
+        //    username: "StrongMarc",
+        //    title: "Title",
+        //    userAvatar: avatar,
+        //    userEmail: email
+        //  }
+        console.log(response)
+
+
+          md = generateMarkdown.markdown(response)
+          console.log(generateMarkdown.markdown(response));
+          
+          // Generate README.md
+          let filename = "README.md"
+          writeToFile(filename, md)
         });
       
         // api.getUser(response.username)
         // console.log ("test", api.getUser(response.username))
 
-        generateMarkdown.markdown(response)
-        console.log(generateMarkdown.markdown(response));
         
-        // Generate README.md
-        let filename = "README.md"
-        writeToFile(filename, response)
     
     });
 

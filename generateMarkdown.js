@@ -15,6 +15,10 @@ function generateMarkdown(data) {
 ## ${data.contributing}
 
 ## ${data.tests}
+
+## ${data.avatar}
+
+## ${data.email}
 `;
 }
 

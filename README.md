@@ -1,10 +1,1 @@
-{
-	"username": "StrongMarc",
-	"title": "Title",
-	"description": "some",
-	"install": "123",
-	"usage": "ex",
-	"license": "001",
-	"contributing": "",
-	"tests": "run"
-}
+"\n# title\n\n## some\n\n## undefined\n\n## 123\n\n## ex\n\n## 00\n\n## ll\n\n## run\n\n## https://avatars1.githubusercontent.com/u/60418958?v=4\n"
