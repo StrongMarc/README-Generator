@@ -95,8 +95,8 @@ function init() {
           // set md to to generateMarkdown return string
           md = generateMarkdown.markdown(response)
           
-          // Generate README.md, call writeToFile function
-          let filename = "README.md"
+          // Generate README.md file in assets folder, call writeToFile function with arguments filename & the markdown string
+          let filename = "./assets/README.md"
           writeToFile(filename, md)
         });
           
