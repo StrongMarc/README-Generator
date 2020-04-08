@@ -2,28 +2,40 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
-## ${data.description}
+## Description:
+${data.description}
 
-## ${data.contents}
+## Table of Contents:
 
-## ${data.install}
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
 
-## ${data.usage}
+## Installation 
+${data.install}
 
-## ${data.license}
+## Usage
+${data.usage}
 
-## ${data.contributing}
+## License
+${data.license}
 
-## ${data.tests}
+## Contributing
+${data.contributing}
 
-## ${data.avatar}
+## Tests
+${data.tests}
 
-## ${data.email}
+## Questions
+<img src= "${data.avatar}" alt = "user image" style = "width: 100px" height = "100px" />
+
+ ${data.email}
 `;
 }
 
 module.exports = { 
-  markdown: generateMarkdown // () {
-  //   console.log(response.project)
-  // }
+  markdown: generateMarkdown 
 }

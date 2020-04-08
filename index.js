@@ -61,9 +61,9 @@ const questions = [
 
 // Given:  write to README.md
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, JSON.stringify(data, null, `\t`), function(err) {
+  fs.writeFile(fileName, data, function(err) {
     if (err) {
-      return console.log(err);
+      throw err;
     }
     console.log(`Success!`);
   });
@@ -75,48 +75,23 @@ function init() {
   inquirer
     .prompt(questions)
     .then(function( response ) {
-      console.log (response)
      
       // moduralization of api & axios
         api.getUser(response.username).then(function(res) {
           const avatar = res.data.avatar_url
           const email = res.data.email
-          // const avatarStr = avatar.join()
-          console.log(avatar)
-          console.log(email)
-
+      
+          // add avatar & email to response object
           response.avatar = avatar;
           response.email = email;
-        //  response = {
-        //    username: "StrongMarc",
-        //    title: "Title"
-        //  }
-
-        //  response.userAvatar = avatar;
-        //  response.userEmail = email;
-
-        //  response = {
-        //    username: "StrongMarc",
-        //    title: "Title",
-        //    userAvatar: avatar,
-        //    userEmail: email
-        //  }
-        console.log(response)
-
-
+        
           md = generateMarkdown.markdown(response)
-          console.log(generateMarkdown.markdown(response));
           
           // Generate README.md
           let filename = "README.md"
           writeToFile(filename, md)
         });
-      
-        // api.getUser(response.username)
-        // console.log ("test", api.getUser(response.username))
-
-        
-    
+          
     });
 
 }
