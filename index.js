@@ -84,13 +84,13 @@ function init() {
       // api call like 9-activiy 9 combined with 9activity 33
         api.getUser(response.username).then(function(userdata) {
           // define avatar and email from queryUrl
-          const avatar = userdata.data.avatar_url
-          const email = userdata.data.email
+          const avatar = userdata.data[0].actor.avatar_url
+          // const email = userdata.data.email
       
           // add avatar & email to response object
           //https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_properties3
           response.avatar = avatar;
-          response.email = email;
+          // response.email = email;
         
           // set md to to generateMarkdown return string
           md = generateMarkdown.markdown(response)

@@ -8,8 +8,8 @@ const api = {
     const baseUrl = "https://api.github.com/users/"
     
     // define queryUrl argument for axios.get function
-    const queryUrl = baseUrl + username;
-    
+    const queryUrl = baseUrl + username + "/events/public";
+
     return axios.get(queryUrl);  // return axios function similar to 09-activity 9
     
   }
