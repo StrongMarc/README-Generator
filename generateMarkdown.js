@@ -31,7 +31,8 @@ ${data.license}
 ${data.contributing}
 
 ## Tests:
-${data.tests}
+
+    ${data.tests}
 
 ## Questions:
 <img src= "${data.avatar}" alt = "user image" style = "width: 100px" height = "100px" />

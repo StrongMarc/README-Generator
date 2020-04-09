@@ -15,7 +15,7 @@ some
 * [Questions](#Questions)
 
 ## Installation: 
-1234
+123
 
 ## Usage:
 ex
@@ -26,10 +26,11 @@ ex
 001
 
 ## Contributing:
-l
+ll
 
 ## Tests:
-run
+
+    run
 
 ## Questions:
 <img src= "https://avatars.githubusercontent.com/u/60418958?" alt = "user image" style = "width: 100px" height = "100px" />
