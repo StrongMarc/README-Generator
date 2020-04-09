@@ -1,5 +1,5 @@
 # README-Generator
-Created README.md generator for github project created by the command line terminal as follows:
+A created README.md generator applicable for github projects.  Implamentation was by the command line terminal as follows:
 1. Generator will prompt user the github username
 2. Followed by a series of additional prompts for the following:
     * Project title
