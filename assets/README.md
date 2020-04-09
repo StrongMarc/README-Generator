@@ -23,10 +23,10 @@ ex
 ## License:
 ![License](https://img.shields.io/badge/License-MIT-Blue)
 
-0011
+001
 
 ## Contributing:
-ll
+l
 
 ## Tests:
 run
@@ -34,4 +34,4 @@ run
 ## Questions:
 <img src= "https://avatars.githubusercontent.com/u/60418958?" alt = "user image" style = "width: 100px" height = "100px" />
 
- undefined
+ marcstrong@yahoo.com

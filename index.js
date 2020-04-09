@@ -85,12 +85,12 @@ function init() {
         api.getUser(response.username).then(function(userdata) {
           // define avatar and email from queryUrl
           const avatar = userdata.data[0].actor.avatar_url
-          // const email = userdata.data.email
+          const email = userdata.data[0].payload.commits[0].author.email
       
           // add avatar & email to response object
           //https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_properties3
           response.avatar = avatar;
-          // response.email = email;
+          response.email = email;
         
           // set md to to generateMarkdown return string
           md = generateMarkdown.markdown(response)
